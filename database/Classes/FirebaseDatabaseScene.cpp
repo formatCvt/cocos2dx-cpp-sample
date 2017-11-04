@@ -301,6 +301,7 @@ FirebaseDatabaseScene::State FirebaseDatabaseScene::updateInitialize() {
     return kStateRun;
   }
   logMessage("Successfully initialized Firebase Auth and Firebase Database.");
+  database_->set_persistence_enabled(true);
   auth_->SignInAnonymously();
   return kStateLogin;
 }
